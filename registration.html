@@ -13,7 +13,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f9f9f9;
+   background-image: url("./images/image1.jpeg");
+   background-repeat: no-repeat;
+   background-size: cover;
   }
   
   .container {
@@ -57,13 +59,9 @@ body {
   }
   
   /* Registration Section */
-  .registration {
-    display: none;
-  }
+ 
   
-  .hidden {
-    display: none;
-  }
+ 
   
   .registration h2 {
     font-size: 1.5em;
@@ -125,13 +123,6 @@ body {
 </head>
 <body>
   <div class="container">
-    <!-- Onboarding Section -->
-    <div class="onboarding">
-      <h1>Welcome to FarmConnect!</h1>
-      <p>Join us in connecting rural farmers, collectors, and recyclers to create a sustainable future.</p>
-      <button class="start-btn" onclick="showRegistration()">Get Started</button>
-    </div>
-
     <!-- Registration Section -->
     <div class="registration hidden" id="registrationForm">
       <h2>Register</h2>
@@ -153,17 +144,11 @@ body {
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" placeholder="Enter a secure password" required>
 
-        <button type="submit" class="submit-btn">Register</button>
+        <button type="submit" class="submit-btn" onclick="window.location.href='./index.html';">Register</button>
       </form>
       <p class="login-link">Already have an account? <a href="#">Login here</a>.</p>
     </div>
   </div>
 
-  <script>
-    function showRegistration() {
-      document.querySelector('.onboarding').classList.add('hidden');
-      document.getElementById('registrationForm').classList.remove('hidden');
-    }
-  </script>
 </body>
 </html>
