@@ -10,8 +10,12 @@ const productsContainer = document.getElementById("productsContainer");
 const addProductForm = document.getElementById("addProductForm");
 
 let products = [
-  { id: '18th Nov. 2024', name:'Yam', description:"Used for making panded yam", price:"400" }
-
+  {
+    id: "18th Nov. 2024",
+    name: "Yam",
+    description: "Used for making panded yam",
+    price: "400",
+  },
 ]; // Array to store products
 
 // Add Product
@@ -71,4 +75,14 @@ function deleteProduct(id) {
   renderProducts();
 }
 
-
+function openPage() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  console.log(name);
+  if (name && email && password) {
+    window.location.href = "about.html";
+  } else {
+    alert("Please enter the required field");
+  }
+}
