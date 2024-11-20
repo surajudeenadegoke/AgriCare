@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onboarding & Registration</title>
+  <style>
+    /* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Onboarding Section */
+  .onboarding {
+    text-align: center;
+  }
+  
+  .onboarding h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .onboarding p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .start-btn {
+    background: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .start-btn:hover {
+    background: #218838;
+  }
+  
+  /* Registration Section */
+  .registration {
+    display: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .registration h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  form label {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  form input:focus, form select:focus {
+    border-color: #28a745;
+    outline: none;
+  }
+  
+  .submit-btn {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background: #0056b3;
+  }
+  
+  .login-link {
+    font-size: 0.9em;
+    text-align: center;
+    color: #555;
+  }
+  
+  .login-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Onboarding Section -->
+    <div class="onboarding">
+      <h1>Welcome to FarmConnect!</h1>
+      <p>Join us in connecting rural farmers, collectors, and recyclers to create a sustainable future.</p>
+      <button class="start-btn" onclick="showRegistration()">Get Started</button>
+    </div>
+
+    <!-- Registration Section -->
+    <div class="registration hidden" id="registrationForm">
+      <h2>Register</h2>
+      <form>
+        <label for="role">Select Your Role:</label>
+        <select id="role" name="role" required>
+          <option value="" disabled selected>Choose an option</option>
+          <option value="collector">Collector</option>
+          <option value="farmer">Farmer</option>
+          <option value="recycler">Recycler</option>
+        </select>
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter a secure password" required>
+
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+      <p class="login-link">Already have an account? <a href="#">Login here</a>.</p>
+    </div>
+  </div>
+
+  <script>
+    function showRegistration() {
+      document.querySelector('.onboarding').classList.add('hidden');
+      document.getElementById('registrationForm').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

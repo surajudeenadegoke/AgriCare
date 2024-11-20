@@ -10,30 +10,46 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <style>
-      .welcome {
-  
+      .main {
+        background-image: url("./images/image2.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+      }
+      body {
+        padding-top: 0;
+      }
+      .onboarding {
+        font-size: 30px;
+        padding: 20px;
+        color: white;
+      }
+      button {
+        padding: 10px 20px;
+        margin-left: 40px;
+        background: blue;
+        color: white;
+      }
+      p{
+        font-size: 18px;
+      }
+      h1{
+        color:white
       }
     </style>
   </head>
   <body>
-    <header class="header">
-      <!-- <img id="logo" width="20%" src="images/logo.png" alt="logo"> -->
-      <img id="logo" width="90px" src="images/logo.png" alt="logo" />
-
-      <div class="nav-link" id="my-links">
-        <a href="index.html"><p>Home</p></a>
-        <a href="about.html">About</a>
-        <a href="learnToFarm.html">Learn To Farm</a>
-        <a href="getCoin.html">Get Coin</a>
-        <a href="addProduct.html">Add Farm Products</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </header>
     <main class="main">
-      <div class="welcome">Welcome to AgriCare</div>
+      <div class="onboarding">
+        <h1>Welcome to AgriCare!</h1>
+        <p>
+          Join us in connecting rural farmers, collectors, and recyclers to
+          create a sustainable future.
+        </p>
+        <button class="start-btn" onclick="">
+          Get Started
+        </button>
+      </div>
     </main>
     <script src="./script.js"></script>
   </body>
