@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  body {
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+    main {
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      gap: 40px;
+      justify-content: space-around;
+    }
+    .bal {
+      padding: 0px 25px;
+      box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.45);
+      width: 60%;
+      height: 50%;
+    }
+    .bal h3 {
+      margin: 0px;
+      padding: 8px 16px;
+      background-color: #0F3202;
+      color: white;
+      border-radius: 8px;
+    }
+    #acc-bal {
+      margin: 6px;
+      padding: 8px 16px;
+      background-color: #96969C1F;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .content {
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      gap: 40px;
+      justify-content: space-around;
+    }
+    
+    .content-section {
+      padding: 12px;
+      box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.35)
+    }
+    .inp {
+      margin-bottom: 10px;
+      padding: 12px;
+      width: 90%;
+      border: 1px solid black;
+      border-radius: 2px;
+      background-color: white;
+    }
+    .content-title {
+      border-radius: 2px;
+      margin: 0px;
+      padding: 20px;
+      background-color: #5D5F6C21;
+    }
+    #btn {
+      margin-top: 10px;
+      padding: 10px 14px;
+      background-color: rebeccapurple;
+      color: white;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+      body {
+        font-size: 18px;
+      }
+       main {
+         gap: 30px;
+       }
+       .bal {
+         width: 25%;
+         height: 25%;
+       }
+      .content {
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+      }
+      .inp {
+        margin-bottom: 20px;
+      }
+      
+    }
+    
+    
+    
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="bal">
+      <h3>Account Balance</h3>
+      <p id="acc-bal"></p>
+      
+    </section>
+    <section class="content">
+      <nav class="content-section">
+        <h3 class="content-title">For Customers</h3>
+        <h3>Purchase</h3>
+        <input placeholder="Input amount" type="text" name="" class="inp" id="inp-elem">
+        <button id="btn">Transfer</button>
+        <p id="show"></p>
+      </nav>
+      
+      <nav class="content-section">
+        <h3 class="content-title">For Farmers</h3>
+        <h3>Add product</h3>
+        <input placeholder="Input product name" type="text" name="" class="inp" id="pro-name">
+        <input placeholder="Input cost" type="text" name="" class="inp" id="pro-value">
+        <button id="btn">Done</button>
+        <p id="show"></p>
+      </nav>
+    </section>
+  </main>
+  
+  
+  
+  <script>
+     
+     class DemoBankAccount {
+       constructor(balance) {
+         this.balance = balance;
+         
+         this.userBal = document.getElementById('acc-bal');
+         this.userBal.innerHTML = this.balance;
+         
+         this.inp = document.getElementById('inp-elem');
+         ;
+         
+       }
+       // Abstract method
+       purchase() {
+         let p = document.getElementById('show');
+         let amount = this.inp.value;
+         this.a = this.balance >= 1;
+         this.b = this.balance >= amount;
+         this.c = amount >= 100;
+         
+         if( !this.a & !this.b) {
+           p.innerHTML = 'Insufficient funds';
+         }
+         else if(this.a & this.b & this.c){
+           p.innerHTML = 'Purchase successful!';
+         }
+         else if(this.a & !this.c) {
+           p.innerHTML = 'Purchase limit is #100';
+         }
+         else{
+           p.innerHTML = 'Insufficient funds';
+         }
+       }
+     }
+     
+     let myPurchase = new DemoBankAccount(1000);
+     let btn = document.getElementById('btn').addEventListener('click', ()=>{
+       myPurchase.purchase();
+       
+     });
+      
+     
+  </script>
+</body>
+
+</html>
