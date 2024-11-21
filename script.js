@@ -1,3 +1,16 @@
+//Function to navigate to about page
+function openPage() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  // console.log(name);
+  if (name && email && password) {
+    window.open('about.html');
+  } else {
+    alert("Please enter the required field");
+  }
+}
+
 const myFunction = () => {
   let navBar = document.getElementById("my-links");
   if (navBar.style.display === "none") {
@@ -73,16 +86,4 @@ function editProduct(id) {
 function deleteProduct(id) {
   products = products.filter((product) => product.id !== id);
   renderProducts();
-}
-
-function openPage() {
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
-  console.log(name);
-  if (name && email && password) {
-    window.location.href = "about.html";
-  } else {
-    alert("Please enter the required field");
-  }
 }
