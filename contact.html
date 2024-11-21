@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Cin</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #6f8048;
+        color: #333;
+      }
+      .container-contact {
+        width: 70%;
+        background-color: aliceblue;
+        margin: 180px auto;
+        padding: 20px 30px;
+        box-shadow: 5px 5px 8px rgba(150, 150, 150, 0.35);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .team-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+      }
+      .team-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+      }
+      h3 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+      .team-content{
+        line-height: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <!-- <img id="logo" width="20%" src="images/logo.png" alt="logo"> -->
+      <img id="logo" width="90px" src="images/logo.png" alt="logo" />
+
+      <div class="nav-link" id="my-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="learnToFarm.html">Learn To Farm</a>
+        <a href="getCoin.html">Get Coin</a>
+        <a href="addProduct.html">Add Farm Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </header>
+    <div class="container-contact">
+      <h1>CONTACT US</h1>
+      <div class="team-list">
+        <div class="team">
+          <img src="./images/deen.jpg" alt="" class="team-img" />
+          <div class="team-content">
+            <h3>Adegoke Surajudeen</h3>
+            <p>Software Development <span>FE/23/2054622,</span></p>
+            <p>surajudeenadegoke@gmail.com <span>08065285162</span></p>
+          </div>
+        </div>
+        <div class="team">
+          <img src="./images/deen.jpg" alt="" class="team-img" />
+          <div class="team-content">
+            <h3>Abioye Akinsola Paul</h3>
+            <p>Software Development <span>FE/23/81449402 </span></p>
+            <p>akinpaul.aa@gmail.com <span>08032642956</span></p>
+          </div>
+        </div>
+        <div class="team">
+          <img src="./images/deen.jpg" alt="" class="team-img" />
+          <div class="team-content">
+            <h3>Kaine Marvellous Chukwuka</h3>
+            <p>Software Development <span>FE/23/67689749 </span></p>
+            <p>onyenwenuc4@gmail.com <span>07082445934</span></p>
+          </div>
+        </div>
+        <div class="team">
+          <img src="./images/deen.jpg" alt="" class="team-img" />
+          <h3>HOPE WISDOM AARON</h3>
+          <p>Quality Assurance <span>FE/23/25573668 </span></p>
+          <p>aaronwisdomhope@gmail.com <span>08106229345</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
