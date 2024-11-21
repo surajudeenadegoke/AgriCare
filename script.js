@@ -5,7 +5,7 @@ function openPage() {
   let password = document.getElementById("password").value;
   // console.log(name);
   if (name && email && password) {
-    window.open('about.html');
+    window.open("about.html");
   } else {
     alert("Please enter the required field");
   }
@@ -22,14 +22,7 @@ const myFunction = () => {
 const productsContainer = document.getElementById("productsContainer");
 const addProductForm = document.getElementById("addProductForm");
 
-let products = [
-  {
-    id: "18th Nov. 2024",
-    name: "Yam",
-    description: "Used for making panded yam",
-    price: "400",
-  },
-]; // Array to store products
+let products = []; // Array to store products
 
 // Add Product
 addProductForm.addEventListener("submit", (e) => {
@@ -87,3 +80,57 @@ function deleteProduct(id) {
   products = products.filter((product) => product.id !== id);
   renderProducts();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const getStarted = document.getElementsByClassName("start-btn");
+
+  // Check if the user has visited before using localStorage
+  if (!localStorage.getItem("hasVisited")) {
+    // If not visited, show the element
+    getStarted.style.display = "block";
+
+    // Set a flag in localStorage to remember the visit
+    localStorage.setItem("hasVisited", "true");
+  }
+});
+
+// Reward conversion rate: 1 can = 10 points
+const rewardRate = 10;
+
+// Get DOM elements
+const canInput = document.getElementById("canInput").value;
+const sendButton = document.getElementById("sendButton");
+const walletBalance = document.getElementById("walletBalance");
+const output = document.getElementById("output");
+
+// Initial wallet balance
+let currentBalance = 0;
+let cans = 0;
+// Handle sending cans
+const getCan = () => {
+  if (isNaN(canInput.value) || canInput.value <= 0) {
+    output.textContent = "Please enter a valid number of cans.";
+  }
+};
+// sendButton.addEventListener("click", () => {
+//   let cans = parseInt(canInput);
+//   if (isNaN(cans) || cans <= 0) {
+//     output.textContent = "Please enter a valid number of cans.";
+//   }else{
+
+//   }
+//     output.style.color = "red";
+//     return;
+//   }
+
+// Calculate rewards
+const rewardPoints = cans * rewardRate;
+currentBalance += rewardPoints;
+
+// Update wallet and display
+walletBalance.textContent = currentBalance;
+output.textContent = `You sent ${cans} cans and earned ${rewardPoints} reward points!`;
+output.style.color = "green";
+
+// Clear input
+canInput.value = "";

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Cin</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #ddd;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      input {
+        padding: 10px;
+        width: 200px;
+        margin: 10px 0;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .wallet {
+        margin-top: 20px;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Send Cans and Get Rewards</h1>
+      <p>Enter the number of cans you are sending:</p>
+      <input type="number" id="canInput" placeholder="Enter number of cans" />
+      <button id="sendButton">Send Cans</button>
+      <div id="output">0</div>
+
+      <div class="wallet">
+        <h2>My Wallet</h2>
+        <p>Reward Points: <span id="walletBalance">0</span></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

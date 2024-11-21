@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,24 +7,20 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  padding-top: 130px; 
-
+  padding-top: 130px;
 }
 .header {
   padding: 16px;
-  /* background-color: green; */
   background-color: rgb(16, 56, 16);
-  /* border-bottom: 2px solid green; */
   display: flex;
-  /* flex-direction: row; */
   align-items: center;
-  /* justify-content: space-evenly; */
   justify-content: space-between;
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   z-index: 10;
+  margin-bottom: 50px;
 }
 
 .nav {
@@ -35,12 +31,10 @@ body {
 .nav-link {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
 }
 .nav-link a {
   margin-left: 20px;
 }
-
 
 #logo {
   border-radius: 60px;
@@ -52,7 +46,7 @@ body {
   text-decoration: none;
 }
 #head-content {
-  padding: 0px 60px;
+  padding: 0px 50px;
   background-color: rgba(252, 235, 204, 0.418);
   color: black;
   font-weight: bold;
@@ -79,14 +73,11 @@ h3 {
   background-color: rgba(218, 165, 32, 0.473);
   padding: 20px 40px;
 }
-.index{
-  background-image: url('./images/farmer.jpg');
-  
+.index {
+  background-image: url("./images/farmer.jpg");
 }
 
 /* Add products */
-
-
 
 .container-product {
   width: 90%;
@@ -96,10 +87,10 @@ h3 {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 50px auto;
-
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #333;
   margin-bottom: 10px;
 }
@@ -111,7 +102,8 @@ label {
   color: #666;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -183,7 +175,6 @@ button {
   background: #c82333;
 }
 
-
 @media (min-width: 769px) and (max-width: 1024px) {
   header {
     padding: 10px;
@@ -197,23 +188,22 @@ button {
     align-items: center;
     justify-content: space-between;
   }
-
 }
 @media screen and (max-width: 768px) {
   .nav-link {
     display: none;
     flex-direction: column;
-    top:90px;
-    right:0px;
-    position:absolute;
+    top: 90px;
+    right: 0px;
+    position: absolute;
     background: rgb(44, 71, 45);
-    width:14rem;
+    width: 14rem;
     /* text-align: center; */
-    height:350px;
+    height: 350px;
     justify-content: space-between;
     padding: 10px;
   }
-  .nav-link a{
+  .nav-link a {
     margin-bottom: 5px;
   }
   #logo {
@@ -221,13 +211,10 @@ button {
   }
   .icon {
     width: 50px;
-   
   }
- 
 }
 @media screen and (min-width: 769px) {
- .icon{
-    display:none
- }
+  .icon {
+    display: none;
   }
-
+}

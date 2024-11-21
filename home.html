@@ -15,56 +15,55 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        height: 100vh;
+        margin-top: -8px;
+        width: 100%;
+        height: 85vh;
       }
-      body {
-        padding-top: 0;
+      .header {
+        margin-bottom: 0px;
       }
+
       .onboarding {
         font-size: 30px;
         padding: 20px;
         color: white;
       }
-      .start-btn {
-        padding: 15px 25px;
-        margin-left: 40px;
-        background: blue;
-        color: white;
-        font-size: 20px;
-        border-radius: 10px;
-        
-      }
-      button:hover {
-        color: rgb(69, 34, 13);
-        background: white;
-      }
+
       p {
         font-size: 30px;
         width: 550px;
-        color: rgb(85, 223, 30);
+        color: rgb(4, 5, 88);
         font-weight: bold;
-        margin-bottom: 60px;
       }
       h1 {
         color: white;
       }
-   
     </style>
   </head>
   <body>
+    <header class="header">
+      <!-- <img id="logo" width="20%" src="images/logo.png" alt="logo"> -->
+      <img id="logo" width="90px" src="images/logo.png" alt="logo" />
+
+      <div class="nav-link" id="my-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="learnToFarm.html">Learn To Farm</a>
+        <a href="getCoin.html">Get Coin</a>
+        <a href="addProduct.html">Add Farm Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </header>
     <main class="main">
       <div class="onboarding">
         <h1>Welcome to AgriCare!</h1>
         <p>
-         We connect rural farmers, collectors, and recyclers to
-          create a sustainable future.
+          We connect rural farmers, collectors, and recyclers to create a
+          sustainable future.
         </p>
-        <button
-          class="start-btn"
-          onclick="window.location.href='registration.html';"
-        >
-          Get Started
-        </button>
       </div>
     </main>
     <script src="./script.js"></script>
