@@ -129,16 +129,21 @@
       <div class="contact-form">
         <h3>Please fill the items below</h3>
         <label for="name">Your name</label>
-        <input type="text" id="name" />
+        <input type="text" id="name" class="form-name" />
         <label for="email" id="email">Your email</label>
         <input type="text" id="email" />
         <label for="subject">Subject</label>
         <input type="text" id="subject" />
         <label for="message">Your message(optional)</label>
         <textarea name="message" id="message"></textarea>
-        <button type="button">Submit</button>
+        <button
+          type="button"
+          class="form-submit"
+          onclick=" window.open('thank-you.html');"
+        >
+          Submit
+        </button>
       </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
