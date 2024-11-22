@@ -6,32 +6,39 @@
     <title>Get Cin</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
         font-family: Arial, sans-serif;
         background-color: #6f8048;
         color: #333;
       }
       .container-contact {
-        width: 70%;
+        width: 80%;
         background-color: aliceblue;
-        margin: 180px auto;
-        padding: 20px 30px;
+        padding: 10px 20px;
         box-shadow: 5px 5px 8px rgba(150, 150, 150, 0.35);
         border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        margin: 150px auto;
+
       }
       .team-img {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         border-radius: 100px;
       }
       .team-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 80px;
+        gap: 20px;
+        place-items: center;
+        margin-bottom: 50px;
+        border-top: 1px solid black;
+        padding-top: 10px;
       }
       h3 {
         font-size: 15px;
@@ -39,8 +46,23 @@
       p {
         font-size: 13px;
       }
-      .team-content{
+      .team-content {
         line-height: 16px;
+      }
+      .team {
+      }
+      @media (max-width: 769px) {
+        .team-list {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 20px;
+          place-items: center;
+          margin-bottom: 50px;
+          border-top: 1px solid black;
+          padding-top: 10px;
+
+        }
+       
       }
     </style>
   </head>
@@ -94,6 +116,30 @@
           <p>Quality Assurance <span>FE/23/25573668 </span></p>
           <p>aaronwisdomhope@gmail.com <span>08106229345</span></p>
         </div>
+        <div class="team">
+          <img src="./images/gidoen.jpeg" alt="" class="team-img" />
+          <h3>Gideon Osadolor</h3>
+          <p>Quality Assurance <span>FE/23/25573668 </span></p>
+          <p>aaronwisdomhope@gmail.com <span>08106229345</span></p>
+        </div>
+        <div class="team">
+          <img src="./images/madwm.jpeg" alt="" class="team-img" />
+          <h3>Gideon Osadolor</h3>
+          <p>Quality Assurance <span>FE/23/25573668 </span></p>
+          <p>aaronwisdomhope@gmail.com <span>08106229345</span></p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Please fill the items below</h3>
+        <label for="name">Your name</label>
+        <input type="text" id="name" />
+        <label for="email" id="email">Your email</label>
+        <input type="text" id="email" />
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" />
+        <label for="message">Your message(optional)</label>
+        <textarea name="message" id="message"></textarea>
+        <button type="button">Submit</button>
       </div>
     </div>
     <script src="script.js"></script>

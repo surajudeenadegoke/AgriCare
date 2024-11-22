@@ -10,65 +10,62 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <style>
-      .main {
+      .welcome-main {
         background-image: url("./images/image2.jpeg");
-        background-repeat: no-repeat;
+        margin-top: 6.8rem;
         background-size: cover;
-        background-position: center;
-        height: 100vh;
-      }
-      body {
-        padding-top: 0;
+        background-repeat: no-repeat;
+        height: 700px;
+        background-position: top center;
+        width: 100vw;
+        margin-top: 80px;
+        margin-bottom: 0;
+        height: 90vh;
       }
       .onboarding {
-        font-size: 30px;
-        padding: 20px;
-        color: white;
+        margin: 20px 15px;
       }
-      .start-btn {
-        padding: 15px 25px;
-        margin-left: 40px;
-
-        color: rgb(69, 34, 13);
-        background: white;
-        font-size: 20px;
-        border-radius: 10px;
-      }
-      button:hover {
-        background: rgb(37, 160, 201);
-        color: rgb(225, 204, 204);
+      .welcom-para {
+        width: 100px;
       }
       p {
         font-size: 30px;
         width: 550px;
-        color: rgb(241, 240, 234);
-        font-weight: 500;
-        margin-bottom: 60px;
+        color: rgb(4, 5, 88);
+        font-weight: bold;
       }
       h1 {
-        color: rgb(233, 225, 225);
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-          sans-serif;
-        width: 600px;
+        color: white;
       }
     </style>
   </head>
   <body>
-    <main class="main">
+    <header class="header">
+      <!-- <img id="logo" width="6%" src="images/logo.png" alt="logo"> -->
+      <img id="logo" width="70px" src="images/logo.png" alt="logo" />
+
+      <div class="nav-link" id="my-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="learnToFarm.html">Learn To Farm</a>
+        <a href="getCoin.html">Get Coin</a>
+        <a href="addProduct.html">Add Farm Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </header>
+    <div class="welcome-main">
       <div class="onboarding">
-        <h1 class="index-header">Welcome to AgriCare!</h1>
-        <p class="index-para">
+        <h1 class="welcom-header">Welcome to AgriCare!</h1>
+        <p class="welcom-para">
           We connect rural farmers, collectors, and recyclers to create a
           sustainable future.
         </p>
-        <button
-          class="start-btn"
-          onclick="window.location.href='registration.html';"
-        >
-          Get Started
-        </button>
       </div>
-    </main>
+    </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
