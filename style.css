@@ -181,7 +181,7 @@ button {
   .nav-link {
     display: none;
     flex-direction: column;
-    top: 90px;
+    top: 80px;
     right: 0px;
     position: absolute;
     background: rgb(44, 71, 45);
