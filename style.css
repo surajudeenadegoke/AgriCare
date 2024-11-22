@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+.parent{
+  display:flex;
+  flex-direction: column;
+  width:10px
+}
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -43,8 +48,13 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
-h3 {
-  color: rgb(3, 31, 3);
+h3{
+  color: rgb(14, 108, 14);
+  margin-bottom: 10px;
+  
+}
+.content-title{
+color:#218838
 }
 .intro {
   padding: 15px 30px;
@@ -163,7 +173,7 @@ button {
   background: #c82333;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+/*@media (min-width: 769px) and (max-width: 1024px) {
   header {
     padding: 10px;
   }
@@ -176,7 +186,7 @@ button {
     align-items: center;
     justify-content: space-between;
   }
-}
+}*/
 @media screen and (max-width: 768px) {
   .nav-link {
     display: none;
