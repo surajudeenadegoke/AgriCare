@@ -1,64 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manage Farm Products</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body{
-        background-image: url('../images/image1.jpeg');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Farm Products</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-image: url("../images/image1.jpeg");
         background-repeat: no-repeat;
         background-size: cover;
-    }
-  </style>
-</head>
-<body>
+      }
+    </style>
+  </head>
+  <body>
     <header class="header">
-        <!-- <img id="logo" width="20%" src="images/logo.png" alt="logo"> -->
-        <img id="logo" width="90px" src="images/logo.png" alt="logo">
-    
-            <div class="nav-link" id="my-links">
-              <a href="index.html"><p>Home</p></a>
-              <a href="about.html">About</a>
-              <a href="learnToFarm.html">Learn To Farm</a>
-              <a href="getCoin.html">Get Coin</a>
-              <a href="addProduct.html">Add Farm Products</a>
-              <a href="contact.html">Contact</a>
-                
-             </div>
-             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-              </a>
-      </header>
-  <div class="container-product">
+      <!-- <img id="logo" width="20%" src="images/logo.png" alt="logo"> -->
+      <img id="logo" width="90px" src="images/logo.png" alt="logo" />
 
-    <h1>Manage Farm Products</h1>
+      <div class="nav-link" id="my-links">
+        <a href="index.html"><p>Home</p></a>
+        <a href="about.html">About</a>
+        <a href="learnToFarm.html">Learn To Farm</a>
+        <a href="getCoin.html">Get Coin</a>
+        <a href="addProduct.html">Add Farm Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </header>
+    <div class="container-product">
+      <h1>Manage Farm Products</h1>
 
-    <!-- Add Product Form -->
-    <div class="add-product">
-      <h2>Add a New Product</h2>
-      <form id="addProductForm">
-        <label for="productName">Product Name:</label>
-        <input type="text" id="productName" placeholder="Enter product name" required>
+      <!-- Add Product Form -->
+      <div class="add-product">
+        <h2>Add a New Product</h2>
+        <form id="addProductForm">
+          <label for="productName">Product Name:</label>
+          <input
+            type="text"
+            id="productName"
+            placeholder="Enter product name"
+            required
+          />
 
-        <label for="productDescription">Description:</label>
-        <textarea id="productDescription" placeholder="Enter product description" required></textarea>
+          <label for="productDescription">Description:</label>
+          <textarea
+            id="productDescription"
+            placeholder="Enter product description"
+            required
+          ></textarea>
 
-        <label for="productPrice">Price (Coins):</label>
-        <input type="number" id="productPrice" placeholder="Enter price in coins" required>
+          <label for="productPrice">Unit Price (#):</label>
+          <input
+            type="number"
+            id="productPrice"
+            placeholder="Enter price in coins"
+            required
+          />
 
-        <button type="submit" class="submit-btn">Add Product</button>
-      </form>
+          <button type="submit" class="submit-btn">Add Product</button>
+        </form>
+      </div>
+
+      <!-- Product List -->
+      <div class="product-list">
+        <h2>Available Products</h2>
+        <ul id="productsContainer"></ul>
+      </div>
     </div>
 
-    <!-- Product List -->
-    <div class="product-list">
-      <h2>Available Products</h2>
-      <ul id="productsContainer"></ul>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
