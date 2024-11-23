@@ -25,6 +25,8 @@
         background: #fff;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 60%;
+        height: 70vh;
       }
 
       input {
@@ -51,6 +53,9 @@
         padding: 10px;
         border-top: 1px solid #ddd;
       }
+      .btn-container{
+        display:flex
+      }
     </style>
   </head>
   <body>
@@ -67,13 +72,21 @@
       </div>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
+        <link rel="stylesheet" href="./style.css" />
       </a>
     </header>
     <div class="container">
       <h1>Send Cans and Get Rewards</h1>
       <p>Enter the weight(kg) of cans you are sending:</p>
-      <input type="number" id="canInput" placeholder="Enter weight(kg) of cans" />
-      <button id="sendButton">Send Cans</button>
+      <div class="btn-container">
+        <input
+          type="number"
+          id="canInput"
+          placeholder="Enter weight(kg) of cans"
+        />
+        <button id="sendButton">Send Cans</button>
+      </div>
+
       <div id="output">50</div>
       <div class="wallet">
         <h2>My Wallet</h2>
